@@ -1,0 +1,18 @@
+{
+    "name": "graciano/blade-helpers",
+    "description": "Helpers for laravel blade template inputs.",
+    "keywords": ["helper","blade", "laravel", "input"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matheus Graciano",
+            "email": "graciano.dev@gmail.com",
+            "homepage": "http://graciano.tk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "~5.1"
+    }
+}
