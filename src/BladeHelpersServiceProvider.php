@@ -15,4 +15,13 @@ class BladeHelpersServiceProvider extends ServiceProvider {
             __DIR__.'/helpers.php' => base_path().'/app/helpers.php',
         ], 'graciano/blade-helpers');
     }
+    /**
+     * Register the application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+    	
+    }
 }
