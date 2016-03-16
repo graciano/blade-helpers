@@ -20,11 +20,11 @@ function input_value($obj, $property, $fallback=null){
     return str_or_fallback($fallback, old($property));
 }
 
-function input_checked($obj, $property){
+function input_checked($obj, $property, $default=false){
     if(isset($obj->{$property}) && $obj->{$property}){
         return "checked";
     }
-    else if(old($property)){
+    else if(old($property) || $default){
         return "checked";
     }
     return "";
