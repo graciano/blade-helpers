@@ -29,3 +29,7 @@ function input_checked($obj, $property, $default=false){
     }
     return "";
 }
+
+function http2field($method='PUT'){
+    return "<input name='_method' type='hidden' value='$method'>";
+}
