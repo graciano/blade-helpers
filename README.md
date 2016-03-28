@@ -1,5 +1,6 @@
 # Blade Helpers
 Helpers for [laravel](http://laravel.com) blade template inputs.
+Supports laravel 5.2
 
 [![GitHub license](https://img.shields.io/github/license/graciano/gess.svg)](https://github.com/graciano/blade-helpers/blob/master/LICENSE)
 [![Packagist](https://img.shields.io/packagist/dt/graciano/blade-helpers.svg)](https://packagist.org/packages/graciano/blade-helpers)
