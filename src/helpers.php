@@ -21,8 +21,9 @@ function input_value($obj, $property, $fallback=null){
 }
 
 function input_checked($obj, $property, $default=false){
-    if(isset($obj->{$property}) && $obj->{$property}){
-        return "checked";
+    if(isset($obj->{$property})){
+        if($obj->{$property})
+            return "checked";
     }
     else if(old($property) || $default){
         return "checked";
@@ -30,3 +31,26 @@ function input_checked($obj, $property, $default=false){
     return "";
 }
 
+function not_null_and_in_array($needle, $haystack)
+{
+    if (is_null($haystack) || count($haystack) <= 0)
+        return false;
+
+    return in_array($needle, $haystack);
+}
+
+function checked_relation($obj, $property, $relation_obj, $relation_method="", $default=false){
+
+    if(not_null_and_in_array($relation_obj->id, old($property))) return "checked";
+
+    if($relation_method==="")
+        $relation_method = $property;
+
+    if(!is_null($obj)) {
+        $ids_relation = $obj->$relation_method()->pluck('id')->toArray();
+        if(not_null_and_in_array($relation_obj->id, $ids_relation))
+            return "checked";
+    }
+
+    return $default? "checked" : "";
+}
