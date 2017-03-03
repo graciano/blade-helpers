@@ -1,6 +1,6 @@
 # Blade Helpers
 Helpers for [laravel](http://laravel.com) blade template inputs.
-Supports laravel 5.2
+Tested in laravel 5.2, 5.3 and 5.4
 
 [![GitHub license](https://img.shields.io/github/license/graciano/gess.svg)](https://github.com/graciano/blade-helpers/blob/master/LICENSE)
 [![Packagist](https://img.shields.io/packagist/dt/graciano/blade-helpers.svg)](https://packagist.org/packages/graciano/blade-helpers)
@@ -30,7 +30,8 @@ Supports laravel 5.2
           ],
       }
   ```
-
+  Then, `composer dumpautoload`
+  
 ## License
 
   This project is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
